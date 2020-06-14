@@ -6,4 +6,7 @@
 *.blg
 *.out
 *.bst
+*.lof
+*.toc
+*.db
 *.DS_Store

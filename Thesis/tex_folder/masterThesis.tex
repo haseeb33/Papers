@@ -1,0 +1,81 @@
+\documentclass[a4paper]{report}
+
+\usepackage{masterThesisEn}
+
+% [required] Title：\maintatile{title}
+\maintitle{A study on time series topic popularity extraction methods with topic modeling
+}
+
+% [required] Published date：\publish{year}{month}
+\publish{2020}{July}
+
+% [required] Student ID：\student{ID number}{Name}
+\student{201826098}{Khan Muhammad Haseeb UR Rehman}
+
+% [required] Abstract：\abst{abstract}
+\abst{
+Topic modeling is extensively used for the natural language processing (NLP) problems of summarizing, organizing, and understanding large document datasets. LDA is widely used for the collection of topics, whereas DTM is famous for the time-series topic analysis. However, by estimating the number of occurrences of topics in each time slice, we can obtain time-series topic popularity using standard LDA. Therefore, if this can be extracted with LDA, then why do we need DTM which has a very high computation cost? The purpose of this research is to determine, either time-series topic information can be extracted from LDA or we need DTM. Topic drifting and popularity are two fundamental aspects of time-series topic analysis. we conducted experiments with different datasets to check the reliability of the information extracted from both models. We used Jensen-Shannon (JS) similarity-based analysis to check for information overlap, and overall and time-series correlation analysis as an inverse approach to extract DTM information from LDA topics. Lastly, we constructed time-series topic popularity graphs for both models from the document-topic distributions and compared the results. Our results show that there is notable DTM topic drifting information in some cases and sometimes no or vague topic drifting. Topic drifting embedded in DTM topics makes this model less favorable for time-series topic popularity analysis. On the other hand, LDA topics with no time transition information provided concrete results of time-series topic popularity. Thus, our results favor the usage of LDA.
+}
+
+% [required] Academic advisors：\advisors{Principal}{Secondary}
+\advisors{Atsuyuki Morishima}{Kei Wakabayashi}
+
+
+% output
+\begin{document}
+
+\makecover
+
+\addtolength{\textheight}{-5mm}
+\setlength{\footskip}{15mm}	% set footer
+% List of contents/figures
+
+\justifying
+
+%\addtolength{\topmargin}{-20mm}
+
+\fontsize{11pt}{15pt}\selectfont
+
+\pagenumbering{roman} % I, II, III, IV 
+\tableofcontents
+\listoffigures
+
+% contents
+\parindent=2em	% set indent
+\pagebreak\setcounter{page}{1}
+\pagenumbering{arabic} % 1,2,3
+\pagestyle{plain}
+
+% chapter：\chapter{}
+% section：\section{}
+% subsection：\subsection{}
+
+\input{Introduction}
+
+\chapter{Related Work}
+\section{Study of Aa}
+\subsection{Study of Bb}
+
+\chapter{Proposal}
+
+\chapter{User Study}
+
+\chapter{Disucussion}
+
+\chapter{Conclusion}
+
+\chapter*{Acknowledgement}
+
+
+% References
+\newpage
+\addcontentsline{toc}{chapter}{\numberline{}References}
+\renewcommand{\bibname}{References}
+
+%% for using bibtex
+%\bibliographystyle{junsrt}
+%\bibliography{hoge(.bib)}
+\bibliographystyle{unsrt}
+\bibliography{References}
+
+\end{document}

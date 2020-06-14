@@ -1,0 +1,458 @@
+%%% ====================================================================
+%%%  BibTeX-file{
+%%%     author          = "Gerry Murray",
+%%%     version         = "1.2",
+%%%     date            = "2 April 2012",
+%%%     filename        = "acmsmall-sample-bibfile.bib",
+%%%     address         = "ACM, NY",
+%%%     email           = "murray at hq.acm.org",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "ACM Reference Format, bibliography, citation, references",
+%%%     supported       = "yes",
+%%%     docstring       = "This BibTeX database file contains 'bibdata' entries
+%%%                        that 'match' the examples provided in the Specifications Document
+%%%                        AND, also, 'legacy'-type bibs. It should assist authors in
+%%%                        choosing the 'correct' at-bibtype and necessary bib-fields
+%%%                        so as to obtain the appropriate ACM Reference Format output.
+%%%                        It also contains many 'Standard Abbreviations'. "
+%%%  }
+%%% ====================================================================
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+@article{lin1991divergence,
+  title={Divergence measures based on the Shannon entropy},
+  author={Lin, Jianhua},
+  journal={IEEE Transactions on Information theory},
+  volume={37},
+  number={1},
+  pages={145--151},
+  year={1991},
+  publisher={IEEE}
+}
+@article{blei2003latent,
+  title={Latent Dirichlet Allocation},
+  author={Blei, David M and Ng, Andrew Y and Jordan, Michael I},
+  journal={Journal of Machine Learning Research},
+  volume={3},
+  pages={993--1022},
+  year={2003}
+}
+@inproceedings{blei2006dynamic,
+  title={Dynamic topic models},
+  author={Blei, David M and Lafferty, John D},
+  booktitle={Proceedings of the 23rd international conference on Machine learning},
+  pages={113--120},
+  year={2006},
+  organization={ACM}
+}
+@inproceedings{hong2010empirical,
+  title={Empirical study of topic modeling in twitter},
+  author={Hong, Liangjie and Davison, Brian D},
+  booktitle={Proceedings of the first workshop on social media analytics},
+  pages={80--88},
+  year={2010},
+  organization={acm}
+}
+@inproceedings{tumasjan2010predicting,
+  title={Predicting elections with twitter: What 140 characters reveal about political sentiment},
+  author={Tumasjan, Andranik and Sprenger, Timm O and Sandner, Philipp G and Welpe, Isabell M},
+  booktitle={Fourth international AAAI conference on weblogs and social media},
+  year={2010}
+}
+@inproceedings{kwak2010twitter,
+  title={What is Twitter, a social network or a news media?},
+  author={Kwak, Haewoon and Lee, Changhyun and Park, Hosung and Moon, Sue},
+  booktitle={Proceedings of the 19th international conference on World wide web},
+  pages={591--600},
+  year={2010},
+  organization={AcM}
+}
+@inproceedings{weng2010twitterrank,
+  title={Twitterrank: finding topic-sensitive influential twitterers},
+  author={Weng, Jianshu and Lim, Ee-Peng and Jiang, Jing and He, Qi},
+  booktitle={Proceedings of the third ACM international conference on Web search and data mining},
+  pages={261--270},
+  year={2010},
+  organization={ACM}
+}
+@inproceedings{sakaki2010earthquake,
+  title={Earthquake shakes Twitter users: real-time event detection by social sensors},
+  author={Sakaki, Takeshi and Okazaki, Makoto and Matsuo, Yutaka},
+  booktitle={Proceedings of the 19th international conference on World wide web},
+  pages={851--860},
+  year={2010},
+  organization={ACM}
+}
+@article{bollen2011twitter,
+  title={Twitter mood predicts the stock market},
+  author={Bollen, Johan and Mao, Huina and Zeng, Xiaojun},
+  journal={Journal of computational science},
+  volume={2},
+  number={1},
+  pages={1--8},
+  year={2011},
+  publisher={Elsevier}
+}
+@inproceedings{kawamae2011trend,
+  title={Trend analysis model: trend consists of temporal words, topics, and timestamps},
+  author={Kawamae, Noriaki},
+  booktitle={Proceedings of the fourth ACM international conference on Web search and data mining},
+  pages={317–326},
+  year={2011}
+}
+@inproceedings{zhao2011comparing,
+  title={Comparing twitter and traditional media using topic models},
+  author={Zhao, Wayne Xin and Jiang, Jing and Weng, Jianshu and He, Jing and Lim, Ee-Peng and Yan, Hongfei and Li, Xiaoming},
+  booktitle={European conference on information retrieval},
+  pages={338--349},
+  year={2011},
+  organization={Springer}
+}
+@inproceedings{zhao2011topical,
+  title={Topical keyphrase extraction from twitter},
+  author={Zhao, Wayne Xin and Jiang, Jing and He, Jing and Song, Yang and Achananuparp, Palakorn and Lim, Ee-Peng and Li, Xiaoming},
+  booktitle={Proceedings of the 49th annual meeting of the association for computational linguistics: Human language technologies-volume 1},
+  pages={379--388},
+  year={2011},
+  organization={Association for Computational Linguistics}
+}
+@article{mimno2012sparse,
+  title={Sparse stochastic inference for latent Dirichlet allocation},
+  author={Mimno, David and Hoffman, Matt and Blei, David},
+  journal={arXiv preprint arXiv:1206.6425},
+  year={2012}
+}
+@inproceedings{han2012automatically,
+  title={Automatically constructing a normalisation dictionary for microblogs},
+  author={Han, Bo and Cook, Paul and Baldwin, Timothy},
+  booktitle={Proceedings of the 2012 joint conference on empirical methods in natural language processing and computational natural language learning},
+  pages={421--432},
+  year={2012},
+  organization={Association for Computational Linguistics}
+}
+@inproceedings{diao2012finding,
+  title={Finding bursty topics from microblogs},
+  author={Diao, Qiming and Jiang, Jing and Zhu, Feida and Lim, Ee-Peng},
+  booktitle={Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics: Long Papers-Volume 1},
+  pages={536--544},
+  year={2012},
+  organization={Association for Computational Linguistics}
+}
+@inproceedings{mehrotra2013improving,
+  title={Improving lda topic models for microblogs via tweet pooling and automatic labeling},
+  author={Mehrotra, Rishabh and Sanner, Scott and Buntine, Wray and Xie, Lexing},
+  booktitle={Proceedings of the 36th international ACM SIGIR conference on Research and development in information retrieval},
+  pages={889--892},
+  year={2013},
+  organization={ACM}
+}
+@inproceedings{koike2013time,
+  title={Time series topic modeling and bursty topic detection of correlated news and twitter},
+  author={Koike, Daichi and Takahashi, Yusuke and Utsuro, Takehito and Yoshioka, Masaharu and Kando, Noriko},
+  booktitle={Proceedings of the Sixth International Joint Conference on Natural Language Processing},
+  pages={917--921},
+  year={2013}
+}
+@inproceedings{zhang2015market,
+  title={Dynamic Topic Modeling for Monitoring Market Competition from Online Text and Image Data},
+  author={Zhang, Hao and Kim, Gunhee and Xing, Eric P},
+  booktitle={Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={1425–1434},
+  year={2015}
+}
+@inproceedings{kim2015toptrak,
+  title={TOPTRAC: Topical Trajectory Pattern Mining},
+  author={Kim, Younghoon and Han, J. Jiawei and Yuan, Cangzhou},
+  booktitle={Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={587–596},
+  year={2015}
+}
+@inproceedings{kalyanam2015context,
+  title={Leveraging Social Context for Modeling Topic Evolution},
+  author={Kalyanam, Janani and Mantrach, Amin and Saez-Trumper, Diego and Vahabi, Hossein and Lanckriet, Gert},
+  booktitle={Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={517–526},
+  year={2015}
+}
+@inproceedings{amoualian2016streaming,
+  title={Streaming-LDA: A Copula-based Approach to Modeling Topic Dependencies in Document Streams},
+  author={Amoualian, Hesam and Clausel, Marianne and Gaussier, Eric and Amini, Massih-Reza},
+  booktitle={Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={695–704},
+  year={2016}
+}
+@article{xie2016topicsketch,
+  title={TopicSketch: Real-Time Bursty Topic Detection from Twitter},
+  author={Xie, Wei and Zhu, Feida and Jiang, Jing and Lim, Ee-Peng and Wang, Ke},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={28},
+  number={8},
+  pages={2216-2229},
+  year={2016},
+  publisher={IEEE}
+}
+@article{telegraph,
+	Author = {Harry Wallop},
+	Date-Added = {2017-06-21 15:12:49 +0000},
+	Date-Modified = {2017-06-21 15:32:19 +0000},
+	Journal = {The Telegraph},
+	Month = {3},
+	Title = {Japan earthquake:how Twitter and Facebook helped},
+	Url = {http://www.telegraph.co.uk/technology/twitter/8379101/Japan-earthquake-how-Twitter-and-Facebook-helped.html},
+	Year = {2011},
+	Bdsk-Url-1 = {http://www.telegraph.co.uk/}
+}
+@article{alsaedi2017can,
+  title={Can we predict a riot? Disruptive event detection using Twitter},
+  author={Alsaedi, Nasser and Burnap, Pete and Rana, Omer},
+  journal={ACM Transactions on Internet Technology (TOIT)},
+  volume={17},
+  number={2},
+  pages={18},
+  year={2017},
+  publisher={ACM}
+}
+@inproceedings{acharya2018dmdtm,
+  title={A Dual Markov Chain Topic Model for Dynamic Environments},
+  author={Acharya, Ayan and Ghosh, Joydeep and Zhou, Mingyuan},
+  booktitle={Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={1099–1108},
+  year={2018}
+}
+@inproceedings{fukuyama2018extracting,
+  title={Extracting time series variation of topic popularity in microblogs},
+  author={Fukuyama, Satoshi and Wakabayashi, Kei},
+  booktitle={Proceedings of the 20th International Conference on Information Integration and Web-based Applications \& Services},
+  pages={365--369},
+  year={2018},
+  organization={ACM}
+}
+@article{karami2018characterizing,
+  title={Characterizing diabetes, diet, exercise, and obesity comments on Twitter},
+  author={Karami, Amir and Dahl, Alicia A and Turner-McGrievy, Gabrielle and Kharrazi, Hadi and Shaw Jr, George},
+  journal={International Journal of Information Management},
+  volume={38},
+  number={1},
+  pages={1--6},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{huang2019technological,
+  title={Technological innovations in disease management: text mining US patent data from 1995 to 2017},
+  author={Huang, Ming and Zolnoori, Maryam and Balls-Berry, Joyce E and Brockman, Tabetha A and Patten, Christi A and Yao, Lixia},
+  journal={Journal of medical Internet research},
+  volume={21},
+  number={4},
+  pages={e13316},
+  year={2019},
+  publisher={JMIR Publications Inc., Toronto, Canada}
+}
+@inproceedings{khan2019events,
+  title={Events Insights Extraction from Twitter Using LDA and Day-Hashtag Pooling},
+  author={Muhammad Haseeb UR Rehman, Khan and Wakabayashi, Kei and Fukuyama, Satoshi},
+  booktitle={Proceedings of the 21th International Conference on Information Integration and Web-based Applications \& Services},
+  pages={240-244},
+  year={2019},
+  organization={ACM}
+}
+
+%JASSO
+%link={https://www.jasso.go.jp/en/about/statistics/intl_student/}
+
+%Yahoo
+%link=\footnote {\url {https://chiebukuro.yahoo.co.jp/}}
