@@ -1,0 +1,39 @@
+\chapter{Related Work}
+Koike et al. \cite{koike2013time} proposed a method that draws a time-series graph to find the bursty topic detection in Twitter data individually, as well as with correlated news, by using DTM \cite{blei2006dynamic}. They applied DTM to extract 50 topics from a subset of news articles and Twitter about \textit{The London Olympics}. Khan et al. \cite{khan2019events} performed a similar type of experiment using LDA. In their experiment, LDA was trained on 1000 topics on hashtag-pooled documents of English tweets. The dataset used in that research was Tweets2011 %\footnote{\url{https://trec.nist.gov/data/tweets/}}. 
+They then created an inference dataset from the same dataset using day-hashtag tweet pooling. In the end, they created time-series graphs of topics that showed the topic popularity, topic burstiness, and interval of bursty topics. They explained the purpose of using LDA as follows: \emph{"Even though DTM allows the distribution of topics and words to be changed over time, DTM has a drawback in the computational cost, which particularly prevents to increase the number of topics K to hundreds or thousands. In Twitter, it's believed that there are many diverse topics including almost anything the people talk in their life. Consequently, the limitation of the DTM is a critical issue for the extraction of topics from Twitter."} In general, Koike et al.'s research and Khan et al.'s research are the same but use different topic models. we want to know why.
+
+To understand this research better, we started with the basics: algorithms of both topic models. The main generative process of LDA with parameters $\alpha$ and $\beta$ is explained below and the implicit assumption is that documents are drawn interchangeably from the same set of topics.
+\begin{enumerate}
+
+\item For each document:
+\begin{enumerate}
+\item  Draw $\theta \sim Dir(\alpha)$
+    \item For each word:
+\begin{enumerate}
+\item Draw $ Z \sim Mult (\theta) $
+\item Draw $ W_{d, n} \sim Mult(\beta_z)$
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+The logistic normal with mean $ \alpha $ to express uncertainty over proportions is part of DTM rather than the topic proportions $\theta$ drawn from Dirichlet distribution. Thus, DTM's generative process for slice $t$ of the sequential corpus is:
+
+\begin{enumerate}
+\item Draw topics $ \beta_t | \beta_{t-1}  \sim N(\beta_{t-1}, \sigma^2I) $
+\item Draw $ \alpha_t | \alpha_{t-1}  \sim N(\alpha_{t-1}, \delta^2I) $
+\item For each document:
+\begin{enumerate}
+\item Draw $ \eta \sim N(\alpha_t, a^2I)$
+\item For each word:
+\begin{enumerate}
+\item Draw $Z \sim Mult(\pi(\eta)) $
+\item Draw $W_{t,d,n} \sim Mult(\pi(\beta_{t,z})) $
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+$\pi$ is a mapping factor that maps the multinomial natural parameters to the mean parameters, $\pi(\beta_{k, t})_w = \frac{exp(\beta_{k,t,w})}{\sum_{w'} exp(\beta_k,t,w')}$. For a detailed explanation, please refer to the following papers: LDA \cite{blei2003latent} and DTM \cite{blei2006dynamic}. Of note, even from just looking at the algorithms, we can see that the computational cost of DTM is much higher than LDA; this is the basis for this research.
+
+Usually, documents are messy and can provide poor results when topic models are applied, so applying linguistic preprocessing may be of some help \cite{han2012automatically}. Tweet pooling has been proposed, and later proved experimentally \cite{mehrotra2013improving}, as an intuitive solution \cite{hong2010empirical,zhao2011comparing} when models perform poorly with a tweets dataset because of small document size.
+
+Hashtag pooling is making documents based on hashtags where all the tweets with one hashtag form a single document. Any tweet having more than one hashtag is added to the tweet pool of each of those hashtags.

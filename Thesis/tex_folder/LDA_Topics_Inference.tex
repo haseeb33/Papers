@@ -1,0 +1,34 @@
+\chapter{LDA Topics Inference}
+To compare with DTM topics, the LDA topic information is organized by time series. We trained the LDA with different datasets without any modification to the LDA machinery.
+Formally, when we denote a set of documents that we would like to analyze by $X = \{\mathbf{x}_1, \dots, \mathbf{x}_D\}$, we simply use $X$ as a training dataset for ordinary LDA training.
+
+However, for the inference part that estimates the number of documents for each topic, we take the time information into account.
+Each document $\mathbf{x}_d$ is associated to a specific time slice, which we denote by $\tau(\mathbf{x}_d)$.
+Let $X_t = \{ \mathbf{x} \in $X$ | \tau(\mathbf{x}) =  t \}$ be a set of documents in time slice $t$.
+We estimate the $\theta_{dk}$ for each document and estimate the number of documents for each topic $N_k^t$ at each time slice $t$ by the following equation:
+\begin{equation}
+N_k^t = \sum_{d: \mathbf{x}_d \in X_t} {\theta}_{dk}
+\end{equation}
+Specifically for a tweets dataset, we use day-hashtag pooling to make the documents and train the model on this document dataset. Thus, $N_k^t$ for this dataset can be calculated using the following equation:
+\begin{equation}
+N_k^t = \sum_{d: \mathbf{x}_d \in X_t} \theta_{dk} \times T_d
+\end{equation}
+where $N_k^t$ in Equation 2 is the estimated number of tweets of topic \textit{k} at \textit{t}, $\theta_{dk}$ is the probability of topic \textit{k} occurring in document \textit{d}, and $T_d$ is the total number of tweets in document \textit{d}.
+
+Probability distribution $\mathbf{\theta}$ is calculated using Dirichlet distribution by applying LDA to the input data.
+
+Given words $ \mathbf{x} = w_1, \dots , w_M$ we estimate the distribution of $\theta$.
+\begin{equation}
+p(\theta|\mathbf{x}) = \sum_\mathbf{z} p(\theta|z)p(\mathbf{z}|\mathbf{x})
+\end{equation}
+where corresponding topics $\mathbf{z} = z_1, \dots, z_K$ and the summation are over all possible assignments of $\mathbf{z}$. Since summation is analytically intractable, we apply Monte Carlo approximation with only one sample. We obtain a sample $ \hat{z} $ from $ p(z|x) $ using (collapsed) Gibbs sampling with five iterations. This approximation reduces the equation into the posterior probability of $ \theta $ given $ \hat{z} $.
+\begin{equation}
+p(\theta|x) \approx p(\theta|\hat{z})
+\end{equation}
+The posterior is a Dirichlet distribution of which the expectation $\hat{\theta}$ is:
+\begin{equation}
+\hat{\theta_k} = \frac{n_k + \alpha_k}{N + \sum_{k'} \alpha_{k'}}
+\end{equation}
+where $ n_k = \sum_{i=1}^N \delta(\hat{z_i}, k) $, i.e., the number of topic k in $\hat{z}$.
+
+The final step is to estimate the number of documents to make the time-series popularity graphs.

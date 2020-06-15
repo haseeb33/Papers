@@ -1,7 +1,10 @@
 \documentclass[a4paper]{report}
 
 \usepackage{masterThesisEn}
-
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{url}
 % [required] Title：\maintatile{title}
 \maintitle{A study on time series topic popularity extraction methods with topic modeling
 }
@@ -52,17 +55,19 @@ Topic modeling is extensively used for the natural language processing (NLP) pro
 
 \input{Introduction}
 
-\chapter{Related Work}
-\section{Study of Aa}
-\subsection{Study of Bb}
+\input{Related_Work}
 
-\chapter{Proposal}
+\input{LDA_Topics_Inference}
 
-\chapter{User Study}
+\input{Similarity_Analysis_of_DTM_and_LDA_Topics}
 
-\chapter{Disucussion}
+\input{Experiment}
 
-\chapter{Conclusion}
+\input{Results}
+
+\input{Discussion}
+
+\input{Conclusion}
 
 \chapter*{Acknowledgement}
 
